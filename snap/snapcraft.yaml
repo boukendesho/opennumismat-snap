@@ -49,8 +49,6 @@ parts:
     source-type: git
     source-tag: '1.9.7'
     source-depth: 1
-    build-packages:
-      - curl
     override-pull: |
       craftctl default
       GH_VERSION=$(git describe --tags --abbrev=0)

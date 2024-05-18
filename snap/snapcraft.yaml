@@ -1,0 +1,78 @@
+name: opennumismat 
+base: core22
+adopt-info: opennumismat
+summary: OpenNumismat is intended primarily for registering a collection of coins. 
+description: |
+  OpenNumismat, is intended primarily for registering a collection of coins. 
+  
+  But it is also suitable for other types of collectibles - stamps, postcards, 
+  badges and more exotic things. 
+
+  Please note that this is not a official maintained package. Use at your own risk.
+
+  Due to the strict permissions control of Snap, some features may not work.
+
+architectures:
+  - build-on: amd64
+
+grade: stable
+confinement: strict
+
+plugs:
+  shmem:
+    interface: shared-memory
+    private: true
+
+apps:
+  opennumismat:
+    command: bin/open-numismat 
+    desktop: meta/gui/open-numismat.desktop
+    extensions:
+      - gnome
+    plugs:
+      - cups
+      - desktop
+      - desktop-legacy
+      - wayland
+      - x11
+      - unity7
+      - home
+      - network
+      - shmem
+      - removable-media
+
+
+parts:
+  opennumismat:
+    plugin: python
+    source: https://github.com/OpenNumismat/open-numismat
+    source-type: git
+    source-tag: '1.9.7'
+    source-depth: 1
+    build-packages:
+      - curl
+    override-pull: |
+      craftctl default
+      GH_VERSION=$(git describe --tags --abbrev=0)
+      craftctl set version=${GH_VERSION}
+    python-packages:
+      - imagehash
+      - numpy
+      - opencv-python-headless
+      - zxing-cpp
+    stage-packages:
+      - libxkbcommon0
+      - libxkbcommon-x11-0
+      - libxkbfile1
+      - libxcb-cursor0
+      - libxcb-icccm4
+      - libxcb-image0
+      - libxcb-keysyms1
+      - libxcb-render-util0
+      - libxcb-render0
+      - libxcb-shape0
+      - libxcb-xkb1
+      - libspeechd2
+      - libmysqlclient21
+      - libodbc2
+      - libpq5

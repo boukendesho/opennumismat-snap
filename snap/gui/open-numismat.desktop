@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=bin/open-numismat
+Icon=${SNAP}/meta/gui/icon.png
+Name=OpenNumismat
+Comment=Coin collecting software for organize and manage your own catalogue
+Categories=Utility

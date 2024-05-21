@@ -4,7 +4,7 @@ adopt-info: opennumismat
 summary: OpenNumismat is intended primarily for registering a collection of coins. 
 description: |
   OpenNumismat, is intended primarily for registering a collection of coins. 
-  
+
   But it is also suitable for other types of collectibles - stamps, postcards, 
   badges and more exotic things. 
 
@@ -47,7 +47,7 @@ parts:
     plugin: python
     source: https://github.com/OpenNumismat/open-numismat
     source-type: git
-    source-tag: '1.9.7'
+    source-tag: '1.9.8'
     source-depth: 1
     override-pull: |
       craftctl default

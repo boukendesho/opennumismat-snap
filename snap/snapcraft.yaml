@@ -1,5 +1,5 @@
 name: opennumismat 
-base: core22
+base: core24
 adopt-info: opennumismat
 summary: OpenNumismat is intended primarily for registering a collection of coins. 
 description: |
@@ -12,8 +12,8 @@ description: |
 
   Due to the strict permissions control of Snap, some features may not work.
 
-architectures:
-  - build-on: amd64
+platforms:
+  amd64:
 
 grade: stable
 confinement: strict
@@ -27,7 +27,7 @@ plugs:
 apps:
   opennumismat:
     command: bin/open-numismat 
-    desktop: meta/gui/open-numismat.desktop
+    desktop: meta/gui/opennumismat.desktop
     extensions:
       - gnome
     plugs:
@@ -52,13 +52,13 @@ parts:
     source-depth: 1
     override-pull: |
       craftctl default
-      GH_VERSION=$(git describe --tags --abbrev=0)
-      craftctl set version=${GH_VERSION}
+      craftctl set version=$(git describe --tags --abbrev=0)
     python-packages:
       - imagehash
       - numpy
       - opencv-python-headless
       - zxing-cpp
+      - urllib3
     stage-packages:
       - libxkbcommon0
       - libxkbcommon-x11-0

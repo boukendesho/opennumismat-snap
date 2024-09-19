@@ -1,4 +1,4 @@
-name: check upstream to see whether a new version available
+name: Check if a new version has been released by upstream
 
 on:
   schedule:

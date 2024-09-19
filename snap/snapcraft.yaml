@@ -17,6 +17,7 @@ architectures:
 
 grade: stable
 confinement: strict
+compression: lzo
 
 plugs:
   shmem:

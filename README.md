@@ -1,7 +1,8 @@
 ## opennumismat-snap
 [![opennumismat](https://snapcraft.io/opennumismat/badge.svg)](https://snapcraft.io/opennumismat)
 
-[opennumismat Project Link](https://github.com/OpenNumismat/open-numismat) 
+## Upstream
+[![opennumismat](https://img.shields.io/github/v/release/OpenNumismat/open-numismat?logo=github)](https://github.com/OpenNumismat/open-numismat)
 
 OpenNumismat, is intended primarily for registering a collection of coins.
 

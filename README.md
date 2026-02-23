@@ -6,6 +6,11 @@
 
 OpenNumismat, is intended primarily for registering a collection of coins.
 
+## Update temporarily paused
+
+The snap store set a rule that all finance related snap need a manual review process.
+The app is waitting for the review now.
+
 ### Authors
 
 This snap is maintained by me, and is not necessarily endorsed or officially maintained by the upstream developers.If you encounter any issues, please kindly report it here.

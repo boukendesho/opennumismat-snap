@@ -32,11 +32,6 @@ apps:
       - gnome
     plugs:
       - cups
-      - desktop
-      - desktop-legacy
-      - wayland
-      - x11
-      - unity7
       - home
       - network
       - shmem

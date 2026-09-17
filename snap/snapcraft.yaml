@@ -43,7 +43,7 @@ parts:
     plugin: python
     source: https://github.com/OpenNumismat/open-numismat
     source-type: git
-    source-tag: '1.11.0'
+    source-tag: '1.11.1'
     source-depth: 1
     override-pull: |
       craftctl default

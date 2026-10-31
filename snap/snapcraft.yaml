@@ -27,7 +27,7 @@ plugs:
 apps:
   opennumismat:
     command: bin/open-numismat 
-    desktop: meta/gui/opennumismat.desktop
+    desktop: gui/opennumismat.desktop
     extensions:
       - gnome
     plugs:
